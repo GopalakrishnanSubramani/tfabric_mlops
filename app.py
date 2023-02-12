@@ -7,7 +7,7 @@ import json
 app = Flask(__name__)
 
 #load the model
-model = joblib.load("./RF.bin")
+model = joblib.load("./svc_model.bin")
 scaling = joblib.load("./scaling.bin")
 
 class NpEncoder(json.JSONEncoder):
