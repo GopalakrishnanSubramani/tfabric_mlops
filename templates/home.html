@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Boston House Price Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="x1_mean" placeholder="x1_mean" required="required" /><br>
+    	<input type="text" name="x1_dev" placeholder="x1_dev" required="required" /><br>
+        <input type="text" name="x2_mean" placeholder="x2_mean" required="required" /><br>
+        <input type="text" name="x2_dev" placeholder="x2_dev" required="required" /><br>
+        <input type="text" name="x3_mean" placeholder="x3_mean" required="required" /><br>
+        <input type="text" name="x3_dev" placeholder="x3_dev" required="required" /><br>
+        <input type="text" name="x4_mean" placeholder="x4_mean" required="required" /><br>
+        <input type="text" name="x4_dev" placeholder="x4_dev" required="required" /><br>       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
